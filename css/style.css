@@ -1,0 +1,101 @@
+/* CSS Document */
+*{ padding:0; margin:0;}
+body{ padding:0; margin:0; font-family:"Microsoft Yahei"; font-size:14px; color:#000;}
+p,div,a,h1,h2,h3,h4,h5,h6,span,ul,li,img,form,input,br,option{ padding:0; margin:0; border:0;font-weight:normal}
+ol,ul{ list-style:none;}
+b,strong{font-weight:normal}
+a{ text-decoration:none; color:#000;}
+img{ border:0; }
+input{ outline:none;}
+.clear{ clear:both;}
+.clr:after{clear:both;content:'\0020';display:block;visibility:hidden;height:0;}
+.clr{zoom:1;}
+
+
+/*主体*/
+.maincontent{width:6.4rem;height:auto;margin:0 auto;background: #9b1314;overflow: hidden;}
+.shop{width:6.4rem;height: 3.08rem;}
+.shop img{width:6.4rem;height: 3.08rem;}
+.nav_content{width:6rem;height:100%;background-color:rgb(51, 51, 51);filter:alpha(opacity=10);opacity:0.1;position:fixed;top:0.53rem;display:none;}
+/*复制*/
+.copyWeixin{position: relative;}
+.copyWeixin img{width: 6.4rem;height:5.56rem;}
+#copy{height:0.66rem;width: 5.2rem;background: #f3f3f3;line-height: 0.66rem;color:#9b1314;font-size:24px;position:absolute;bottom:0.8rem;margin: 0 0.4rem;border-radius:0.05rem;padding: 0rem 0.2rem;}
+/*#copy span{display: inline-block;float: right;}*/
+
+/*轮播图*/
+.swiper-container {
+        width: 6.4rem;
+        height:auto;
+		margin-top:-0.14rem;
+    }
+    .swiper-slide {
+        text-align: center;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+.swiper-container img{width:6.4rem;height:3.2rem;} 
+ .swiper-button-prev, .swiper-container-rtl .swiper-button-next{background-image:#eee;}
+  .swiper-button-prev{background:url(../images/pres.png) no-repeat;width:0.27rem;heihgt:0.5rem;}
+ .swiper-button-next{background:url(../images/nexs.png) no-repeat;width:0.27rem;heihgt:0.5rem;}
+ .swiper-pagination{left:10%;}
+ .swiper-button-next, .swiper-button-prev {
+   
+    width: 27px;
+    height: 50px;}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+}
+.swiper-pagination-bullet {
+    width: 0.12rem;
+    height: 0.12rem;
+    display: inline-block;
+    border-radius: 0.12rem;}
+/*产品分类*/
+.sort {height:1.02rem;}
+.sort li{float:left;width:25%;height:0.4rem;text-align:center;margin-top:0.18rem;}
+.sort li p{font-size:0.11rem;}
+.sort li img{width:0.4rem;height:0.4rem;}
+.youhui{clear:both;height:3.18rem;}
+.youhui li{float:left;}
+.youhui li img{width:3.2rem;height:3.18rem;}
+.qianggou{position:relative;margin:0.4rem 1%;clear:both;height:auto;}
+.time h2{font-size:0.3rem;margin:0.3rem auto;text-align: center;color: #fff;font-size: 0.32rem;}
+.qianggou li{float:left;width:48%;margin:1%;overflow: hidden;background: #fff;position: relative;}
+.qianggou li img{width:2.83rem;height:2.83rem;margin:2.7%;border: solid 1px #9b1314;}
+.qianggou li a{font-size:0.12rem;}
+.qianggou li p{line-height:0.5rem;font-size:0.2rem;margin-left:0.25rem;color:#f02b2b;}
+.qianggou li a span{margin-left:0.25rem;font-size:0.16rem;}
+.qianggou li p span{text-decoration:line-through;color:#848689;margin-left:0.03rem;}
+.buy{width:1rem;height: 0.32rem;line-height: 0.32rem;text-align: center;display: inline-block;background: #fda706;color:#9b1314;border-radius:0.05rem;position: absolute;bottom: 0.1rem;right: .1rem;cursor:pointer;}
+.footer{clear:both;height:auto;border-top:solid 1px #999;position:fixed;bottom:0px;background:#fff;width:6.4rem;margin:0 auto; }
+.footer li{float:left;width:33.3%;text-align:center;padding:0.1rem 0;}
+.footer li a{font-size:0.1rem;}
+.gonggao{margin:0.5rem 0 2rem;padding:0 4%;clear: both;position: relative;}
+#copy input{background: #f3f3f3;width:100%;height: 90%;margin:0;color:#fff;font-size:0.24rem;float: left;color:#fda706;text-align: left;}
+#copy a{position: absolute;top:0;right: 1rem;color: #fff;}
+.second #copy a{text-align: center;float:none;font-size: 0.62rem;color:#fff;}
+.second #copy{text-align: center;height: 0.8rem;line-height:.8rem;position: relative;margin-bottom: 0.2rem;}
+
+.gonggao p{color:#fff;font-size: 0.18rem;letter-spacing: 0.04rem;line-height: 0.5rem}
+.gonggao h3{color:#fedb03;font-size:0.32rem;text-align: center;margin-bottom: 0.2rem;}
+.gonggao span{color:#9b1314;font-size: 0.26rem;}
+.gonggao #copy{bottom: 0rem;position: relative;top:0px;margin:0.4rem 0.15rem;}
+#copyClick input{height:0.66rem;width: 5.6rem;background: #4c4c4c;line-height: 0.66rem;color:#fff;font-size:24px;margin-left: 0.15rem;border-radius: 0.05rem;}
+.shopName{text-align: center;padding:0.5rem 0px;background:#fff;color:#666;margin-bottom:0.6rem;}
+.qianggou ul{overflow: hidden;}
+#copy #weixinhao{color:#000;}
+.second span{color: #000;}
+#noteY span{color:#fedb03;}

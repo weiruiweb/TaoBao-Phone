@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
+<META HTTP-EQUIV="Expires" CONTENT="0">
+<title>手机淘宝店首页</title>
+<script src="js/jquery1.8.3.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/swiper.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/base.js" type="application/javascript"></script>
+
+</head>
+
+<body>
+<div id="app">
+<div class="maincontent">
+	<img src="images/gongao1.png" class="second_gogao">
+	<div class="gonggao second">
+		<p>1.本次优惠活动只面向<span>微信客户</span></p>
+		<p>2.请添加官方活动微信号进行下单及售后服务</p>
+		<p>3.<span>支持到货付款</span>，验货满意再付款，7天无理由退换货</p>
+		<p>4.本活动最终结束权属手机淘宝首页所有</p>
+		<div id="copy">
+			<span>官方微信号</span>
+
+		</div>
+		<div id="copy" v-if="weixinCopy&&weixinCopy[0]">
+			<div  id="weixinhao">{{weixinCopy[0].title}}</div>
+
+		</div>
+		<div id="copyClick">
+			<input type="button" onClick="copyUrl2()" value="点击复制微信号" />
+		</div>
+	</div>
+	<div class="footer">
+		<ul v-if="weixinCopy&&weixinCopy[0]">
+			<li><a href="index.html"><img src="images/footer_a.jpg"></a><p>{{weixinCopy[0].description}}</p></li>
+			<li><a href="second.html"><img src="images/gwcar1.jpg"></a><p>{{weixinCopy[0].keywords}}</p></li>
+			<li><a href="second.html"><img src="images/footer_5.jpg"></a><p>{{weixinCopy[0].contactPhone}}</p></li>
+		</ul>
+	</div>
+</div>
+</div>
+<script type="text/babel">
+			
+			var app = new Vue({
+				el: '#app',
+				data: function() {
+					return {
+						weixinCopy:[],
+						pageArray:[],
+						allPages:0,
+						linkPage:'',
+					}
+
+				},
+				
+				created: function () {
+				  
+				    this.getWeixinCopy();
+				},
+				methods:{
+					getWeixinCopy() {
+						var self = this;
+						
+						var postData = {
+						    count: 0,
+						    currentPage: 1,
+						    pagesize:6,
+						    is_page:true,
+						    searchItem:{
+								thirdapp_id:26,
+								menu_id:342
+							}
+					    };
+
+						var callback = (res)=>{
+							self.weixinCopy = res.data;
+						};
+						window.base.articleList(postData,callback);
+					},
+
+					
+
+				}
+			});
+			
+		</script>
+<script>
+	function copyUrl2()
+    {
+        var Url2=document.getElementById("weixinhao").innerText;
+        var oInput = document.createElement('input');
+        oInput.value = Url2;
+        document.body.appendChild(oInput);
+        oInput.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        oInput.className = 'oInput';
+        oInput.style.display='none';
+        alert('复制成功');
+    }
+</script>
+</body>
+</html>
